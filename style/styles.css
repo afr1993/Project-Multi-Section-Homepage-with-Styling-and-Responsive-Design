@@ -1,0 +1,134 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+.section {
+  padding: 60px 0;
+}
+
+/* Header Styles */
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5rem;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #ff9800;
+}
+
+/* Intro Section */
+.intro {
+  text-align: center;
+  background: #eee;
+}
+
+/* Services */
+.services .cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Portfolio */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.portfolio-item {
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+.portfolio-item:hover {
+  transform: scale(1.05);
+}
+.portfolio-item img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* Contact */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.contact-form button {
+  padding: 12px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .services .cards {
+    flex-direction: column;
+  }
+}
